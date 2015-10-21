@@ -102,11 +102,11 @@ public:
     }
 
     int SqlExecInteger(std::string query, int fail=-1) {
-      PGresult mRes = PQexec(mConn, query.c_str());
+      mRes = PQexec(mConn, query.c_str());
       int result_status = PQresultStatus(mRes);
       int result = fail;
       if (result_status == PGRES_TUPLES_OK) {
-        result = PQgetvalue(mRes, 0, 0);
+//        result = PQgetvalue(mRes, 0, 0);
         Clear();
       }
       return result;
