@@ -4,8 +4,11 @@
 #include <iterator>
 
 #include "Building.hh"
+#include "RedshiftConnector.hh"
 
-class RedshiftCityLayoutBuilder:public CityLayoutBuilder  {
+#include <string>
+
+class RedshiftCityLayoutBuilder {
 protected:
   std::string mHost;
   std::string mPort;
@@ -35,38 +38,27 @@ public:
 
   // Configure
   void Configure(const std::string key, const std::string val) {
-    switch(key) {
-      case "host":
-        mHost = val;
-        break;
-      case "port":
-        mPort = val;
-        break;
-      case "dbname":
-        mDbName = val;
-        break;
-      case "user":
-        mUser = val;
-        break;
-      case "pass":
-        mPassword = val;
-        break;
-      default:
-        // Do nothing
-    }
+      if (key == "host") {
+          mHost = val;
+      } else if (key == "port") {
+          mPort = val;
+      } else if (key == "dbname") {
+          mDbName = val;
+      } else if (key == "user") {
+          mUser = val;
+      } else if (key == "pass") {
+          mPassword = val;
+      }
   }
 
   void BuildCity() {
-    mConnector = new RedshiftConnector(
-        std::string host,
-        std::string port,
-        std::string dbname,
-        std::string user,
-        std::string pass);
-
-    mConnector->GetTables();
+//    mConnector = new RedshiftConnector(
+//        std::string host,
+//        std::string port,
+//        std::string dbname,
+//        std::string user,
+//        std::string pass);
+//
+//    mConnector->GetTables();
   }
-
-  virtual void ClearCity() = 0;
-  virtual BuildingIterator GetBuildings() = 0;
 };

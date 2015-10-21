@@ -4,6 +4,7 @@
 #include <iterator>
 
 #include "Building.hh"
+#include "BuildingIterator.hh"
 
 class CityLayoutBuilder {
 public:

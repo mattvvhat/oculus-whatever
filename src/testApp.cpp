@@ -1,8 +1,11 @@
 #include "testApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup()
-{
+void testApp::setup() {
+    
+    // Initialize the city layout
+//    setupCity();
+    
 	ofBackground(0);
 	ofSetLogLevel( OF_LOG_VERBOSE );
 	ofSetVerticalSync( true );
@@ -40,6 +43,7 @@ void testApp::setup()
 	cam.begin();
 	cam.end();
 }
+
 
 
 //--------------------------------------------------------------

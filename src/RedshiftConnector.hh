@@ -66,6 +66,7 @@ public:
     } else {
       Clear();
     }
+  }
 
     std::vector<Building> GetLayout(int callback) {
       // Get list of tables
@@ -119,7 +120,4 @@ public:
       b.height = SqlExecInteger(BUILDING_HEIGHT_QUERY);
       return b;
     }
-
-    return table_list;
-  }
 };
