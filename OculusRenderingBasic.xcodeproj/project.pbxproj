@@ -142,6 +142,14 @@
 			name = "3rd party frameworks";
 			sourceTree = "<group>";
 		};
+		C9CBD34C1BD7DCA200214A27 /* oculus */ = {
+			isa = PBXGroup;
+			children = (
+				C9C018541BD6EF8C007948C6 /* ofxOculusDK2.cpp */,
+			);
+			name = oculus;
+			sourceTree = "<group>";
+		};
 		E4328144138ABC890047C5CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +181,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				C9C018541BD6EF8C007948C6 /* ofxOculusDK2.cpp */,
+				C9CBD34C1BD7DCA200214A27 /* oculus */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
